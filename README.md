@@ -1,1 +1,4 @@
 # netflix
+
+- javascript
+- nodeJS
