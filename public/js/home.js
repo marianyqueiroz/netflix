@@ -43,7 +43,7 @@ const makeCategoryElement = (category, data) => {
 }
 
 const makeCards = (id, data) => {
-    const movieContainer = document.querySelector(id)
+    const movieContainer = document.getElementById(id)
 
     data.forEach((item, i) => {
         if (item.backdrop_path == null) {
@@ -59,5 +59,11 @@ const makeCards = (id, data) => {
         <p class="movie-title">${item.title}</p>
         </div>
         `
+        if (i == data.length - 1) {
+            setTimeout(() => {
+                setupScrooling()
+            }, 100)
+        }
+
     })
 }
